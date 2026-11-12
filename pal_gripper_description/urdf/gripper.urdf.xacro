@@ -52,6 +52,14 @@
     <axis xyz="0 0 0" />
   </joint>
 
+  <link name="${name}_esp32_cam_link"/>
+
+  <joint name="${name}_esp32_cam_joint" type="fixed">
+    <parent link="${name}_link" />
+    <child link="${name}_esp32_cam_link" />
+    <origin xyz="0 0.038 -0.09" rpy="0 ${80 * deg_to_rad} 1.5708" />
+  </joint>
+
   <link name="${name}_right_finger_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.008658 0.019724 -0.149125" />
